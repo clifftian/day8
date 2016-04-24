@@ -10,7 +10,7 @@ public class MyRun implements Runnable {
 	
 	@Override
 	public void run() {
-		int j = 100;
+		int j = 10;
 		while (j > 0) {
 			System.out.println("hello" + i);
 			j = j - 1;
