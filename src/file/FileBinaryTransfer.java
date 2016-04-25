@@ -6,23 +6,21 @@ public class FileBinaryTransfer {
 
 	public void fileTransfer(String source, String target) throws Exception {
 
-
-		FileInputStream fi = new FileInputStream(source);
-		FileOutputStream fo = new FileOutputStream(target);
-		try {
-			byte[] buff = new byte[100];
-			int len = 100;
-
-			while ((len = fi.read(buff)) != -1) {
-				System.out.println(buff.toString());
-				fo.write(buff);
+		FileInputStream fis = new FileInputStream (source);
+		FileOutputStream fos = new FileOutputStream (target);
+		try {			
+			byte[] buf = new byte[1024]; 
+			
+			while (fis.read(buf) != -1){
+				fos.write(buf);
 			}
-		} catch (Exception e) {
+		}catch (Exception e){
 			e.printStackTrace();
-		} finally {
-			fi.close();
-			fo.close();
+		}finally{
+			fis.close();
+			fos.close();
 		}
+		
 
 	}
 
@@ -30,8 +28,8 @@ public class FileBinaryTransfer {
 		// TODO Auto-generated method stub
 
 		FileBinaryTransfer fbt = new FileBinaryTransfer();
-		fbt.fileTransfer("F:\\temp\\BinaryTransfer.zip",
-				"F:\\temp\\BinaryTransfer_1.zip");
+		fbt.fileTransfer("Y:/VMware/Windows 8 Enterprise en x64.zip",
+				"F:\\temp\\test.zip");
 
 	}
 
