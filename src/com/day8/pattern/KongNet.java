@@ -1,5 +1,8 @@
 package com.day8.pattern;
 
+//http://www.zhihu.com/question/19801131
+//Good explanation
+
 interface ServiceProvider {
 
 	public void customHint();

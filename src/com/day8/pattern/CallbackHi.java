@@ -27,7 +27,7 @@ public class CallbackHi {
 	 */
 	public static void main(String[] args) {
 		
-		File f = new File("/home/ftian/workspace/myLearning/src/com/day8/containers");
+		File f = new File("/home/ftian/workspace/day8/src/com/day8/containers");
 		
 		FilenameFilter fnf = new MyFilenameFilter(".*Test.*");
 		String[] fs = f.list(fnf);
