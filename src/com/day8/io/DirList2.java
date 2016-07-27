@@ -16,6 +16,12 @@ public class DirList2 {
 			public boolean accpet(File dir, String name){
 			return pattern.matcher(name).matches();
 			}
+
+			@Override
+			public boolean accept(File arg0, String arg1) {
+				// TODO Auto-generated method stub
+				return false;
+			}
 		};
 		
 	}
