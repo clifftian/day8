@@ -7,11 +7,6 @@ import java.util.Date;
 
 public class DateComparison {
 	
-	
-	/**
-	 * @param args
-	 * @throws InterruptedException
-	 */
 	public static void main(String[] args) throws InterruptedException {
 		
 		long startTime = System.currentTimeMillis();
@@ -40,7 +35,8 @@ public class DateComparison {
 		}
 		java.lang.Thread.sleep(1000);
 		long endTime = System.currentTimeMillis();
-		System.out.println(endTime-startTime);
+		System.out.print("The program exec time: ");
+		System.out.println(endTime-startTime );
         
 	}
 
