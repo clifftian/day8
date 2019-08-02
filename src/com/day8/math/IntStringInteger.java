@@ -4,8 +4,16 @@ public class IntStringInteger {
 
 	public static void main(String[] args) {
 		
+		
 		//int --> String or binrary or octal
 		int i=1024;
+		
+		if (i>0){
+			System.out.println(">>>0");
+		}else if (i>10){
+			System.out.println(">>>10");
+		}
+		
 		System.out.println(String.valueOf(i));
 		System.out.println(String.format("%o", i));
 		

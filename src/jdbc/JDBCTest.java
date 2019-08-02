@@ -23,17 +23,13 @@ public class JDBCTest {
 
 			try {
 
-				DriverManager
-						.registerDriver(new oracle.jdbc.driver.OracleDriver());
+				DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 				Long dt1 = System.currentTimeMillis();
-				String connStr = "jdbc:oracle:thin:@" + args[0] + ":" + args[1]
-						+ ":" + args[2];
+				String connStr = "jdbc:oracle:thin:@" + args[0] + ":" + args[1] + ":" + args[2];
 				System.out.println("Connection String : " + connStr);
 				conn = DriverManager.getConnection(connStr, args[3], args[4]);
 				Long dt2 = System.currentTimeMillis();
-				System.out
-						.println("DB connection build time in milliseconds: "
-								+ (dt2 - dt1));
+				System.out.println("DB connection build time in milliseconds: " + (dt2 - dt1));
 
 				String insertStmt = "select count(*) from administrativedomain";
 				pstmt = conn.prepareStatement(insertStmt);
@@ -42,8 +38,7 @@ public class JDBCTest {
 				Long dt3 = System.currentTimeMillis();
 				pstmt.execute();
 				Long dt4 = System.currentTimeMillis();
-				System.out.println("SQL Execution Time in milliseconds: "
-						+ (dt4 - dt3));
+				System.out.println("SQL Execution Time in milliseconds: " + (dt4 - dt3));
 
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
@@ -52,9 +47,9 @@ public class JDBCTest {
 				pstmt.close();
 				conn.close();
 			}
-			
+
 			java.lang.Thread.sleep(1000);
-			
+
 		}
 
 	}

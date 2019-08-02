@@ -23,8 +23,7 @@ public class TheFirstMySQLJDBC {
 		ResultSet rs = null;
 
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/school?"
-					+ "user=ftian&password=Tz3338");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/school?" + "user=ftian&password=Tz3338");
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery("SELECT * FROM teacher");
 
@@ -32,8 +31,7 @@ public class TheFirstMySQLJDBC {
 			// the query will be a SELECT...
 
 			/*
-			 * if (stmt.execute("SELECT foo FROM bar")) { rs =
-			 * stmt.getResultSet(); }
+			 * if (stmt.execute("SELECT foo FROM bar")) { rs = stmt.getResultSet(); }
 			 */
 
 			while (rs.next()) {

@@ -20,16 +20,15 @@ class AddThread extends Thread {
 		}
 
 		synchronized (thelock) {
+			System.out.println("in AddThread sync");
 			hasDone = true;
 			thelock.notifyAll();
 		}
-
 	}
 
 	public int getResult() {
 		return res;
 	}
-
 }
 
 public class WaitNotifyTest {
@@ -48,7 +47,9 @@ public class WaitNotifyTest {
 
 			synchronized (mylock) {
 				try {
+					System.out.println("in main sync and main waiting here");
 					mylock.wait();
+					System.out.println("in main sync and main waiting done");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
