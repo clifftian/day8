@@ -7,8 +7,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-
 import oracle.sql.ArrayDescriptor;
+
+/*
+ * Test different bind parameters
+ */
 
 public class WindchillJDBCQuery {
 	

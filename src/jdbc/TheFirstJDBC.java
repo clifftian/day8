@@ -2,6 +2,11 @@ package jdbc;
 
 import java.sql.*;
 
+/*
+ * What is the comment? Purely Windchill JDBC Test
+ * 
+ */
+
 class TheFirstJDBC {
 	
 	String user = "guest";
