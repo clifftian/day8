@@ -1,11 +1,11 @@
-package date;
+package com.day8.date;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class DateComparison {
-	
 	
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -15,6 +15,12 @@ public class DateComparison {
         String input = "2015-03-003 16:30";
         java.text.SimpleDateFormat inputDf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm");
 
+        Calendar cal = Calendar.getInstance();
+        System.out.println(cal.getTime());
+        Calendar calTemp = (Calendar) cal.clone();
+        calTemp.add(Calendar.DAY_OF_YEAR, -5);
+        System.out.println("XXX : " + calTemp.getTime());
+        
         
 		try {
 			inputdate = inputDf.parse(input);
@@ -29,7 +35,8 @@ public class DateComparison {
 		}
 		java.lang.Thread.sleep(1000);
 		long endTime = System.currentTimeMillis();
-		System.out.println(endTime-startTime);
+		System.out.print("The program exec time: ");
+		System.out.println(endTime-startTime );
         
 	}
 
